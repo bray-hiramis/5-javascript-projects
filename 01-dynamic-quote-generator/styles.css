@@ -1,0 +1,95 @@
+*,
+::after,
+::before {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --font-size: 10px;
+   --bg-color: #222;
+   --txt-color: #f2f2f2;
+   --accent-color: #4aeb2e;
+}
+
+html {
+   font-size: var(--font-size);
+}
+
+body {
+   font-family: sans-serif;
+   background: var(--bg-color);
+   color: var(--txt-color);
+   display: flex;
+   height: 100vh;
+   justify-content: center;
+   align-items: center;
+   line-height: 1.8;
+}
+
+.container {
+   border: 2px solid var(--accent-color);
+   border-radius: 10px;
+   padding: 2em;
+   width: 70%;
+   height: 60%;
+}
+
+.title {
+   font-size: 2.5rem;
+   text-align: center;
+   margin: 1.8em 0;
+}
+
+.quote {
+   text-align: center;
+   font-size: 2rem;
+   margin: 1.8em 0;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+}
+
+.quote::before {
+   content: '"';
+}
+
+.quote::after {
+   content: '"';
+}
+
+.author {
+   font-size: 1.6rem;
+   font-style: italic;
+   opacity: 0;
+   transition: opacity .3s ease-in-out;
+}
+
+.author::before {
+   content: "- ";
+}
+
+.btn-quote {
+   cursor: pointer;
+   display: block;
+   min-width: 100%;
+   border-radius: 10px;
+   border: none;
+   padding: .8em;
+   margin: 1.1em 0;
+   font-size: 1.6rem;
+   background-color: var(--accent-color);
+   transition: .2s;
+}
+
+.btn-quote:active {
+   background-color: #36b420;
+}
+
+.fade-in {
+   opacity: 1;
+}
+
+.fade-out {
+   opacity: 0;
+}
