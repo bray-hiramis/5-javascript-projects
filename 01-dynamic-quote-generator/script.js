@@ -32,7 +32,7 @@ const generator = (q) => {
    quoteTxt.textContent = strQuotes.quote;
    authorTxt.textContent = strQuotes.author;
 
-   return strQuotes;
+   return strQuotes; // this is for console purposes
 };
 
 btnQuote.addEventListener('click', () => {
