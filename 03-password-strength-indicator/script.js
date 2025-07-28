@@ -22,25 +22,25 @@ function passwordStrength(psw) {
       upperCaseText.style.color = 'green';
    } else {
       upperCaseText.style.color = 'crimson';
-   }
+   };
 
    if (psw.match(specialCharacters)) {
       specialCharText.style.color = 'green';
    } else {
       specialCharText.style.color = 'crimson';
-   }
+   };
 
    if (psw.match(digits)) {
       numberText.style.color = 'green';
    } else {
       numberText.style.color = 'crimson';
-   }
+   };
 
    if (psw.length >= minLength) {
       min.style.color = 'green';
    } else {
       min.style.color = 'crimson';
-   }
+   };
 };
 
 passwordInput.addEventListener('input', function() {
