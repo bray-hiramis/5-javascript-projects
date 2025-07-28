@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Password Strength Indicator</title>
+      <link rel="stylesheet" href="styles.css">
+   </head>
+   <body>
+      
+      <div class="container">
+         <h1 id="title">Password Strength Indicator</h1>
+         <form action="./password.html">
+            <label for="password">
+               Enter a password: <input type="password" name="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+            </label>
+            <button type="submit">Submit</button>
+         </form>
+         <div class="criteria">
+            <p data-char="lower-case">A lowercase letter is required</p>
+            <p data-char="upper-case">An uppercase letter is required</p>
+            <p data-char="special-char">A special character is required</p>
+            <p data-char="number">A number is required</p>
+            <p data-char="min">A minimum of 8 character is required</p>
+         </div>
+      </div>
+
+      <script src="script.js"></script>
+   </body>
+</html>
