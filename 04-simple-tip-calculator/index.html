@@ -8,23 +8,33 @@
    </head>
    <body>
       
-      <form action="">
-         <label for="amount">Total Bill Amount:</label>
-         <input type="number" name="amount" id="amount" min="1">
+      <div class="container">
 
-         <input type="checkbox" name="split" id="split">
-         <label for="split">Split Bill?</label>
-         <div id="number-of-people">
-            
-         </div>
+         <h1>Tip Calculator</h1>
+         <form action="">
+            <!-- total bill -->
+            <label for="amount">Total Bill Amount:</label>
+            <input type="number" name="amount" id="amount" min="1">
 
-         <label for="tip">Tip percentage (%)</label>
-         <input type="range" name="tip" id="tip" min="10" max="30">
-         <p>Tip Percentage: <span id="tip-text"></span></p>
+            <!-- split bill -->
+            <input type="checkbox" name="split" id="split">
+            <label for="split">Split Bill?</label>
+            <div id="split-container">
+               <label for="split-input">How many people to split the bill?</label>
+               <input type="number" name="split-input" id="split-input" min="2">
+               <p>Total Amount of bill per person: <span id="split-total"></span></p>
+            </div>
 
-      </form>
+            <!-- tip percentage -->
+            <label for="tip">Tip percentage (%)</label>
+            <input type="range" name="tip" id="tip" min="10" max="30">
+            <p>Tip Percentage: <span id="tip-text"></span></p>
+         </form>
 
-      <p>Total Tip: <span id="total"></span></p>
+         <p>Total Tip: <span id="total"></span></p>
+
+      </div>
+      
 
       <script src="script.js"></script>
    </body>

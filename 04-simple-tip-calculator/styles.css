@@ -1,0 +1,36 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --primary-color: #003366;
+   --accen-color: #336699;
+   --bg-color: #f2f2f2;
+   --text-color: #222;
+}
+
+html {
+   font-size: 10px;
+}
+
+body {
+   background-color: var(--bg-color);
+   font-family: sans-serif;
+}
+
+h1 {
+   font-size: 4rem;
+}
+
+.container {
+   max-width: 960px;
+   margin: 0 auto;
+}
+
+#split-container {
+   height: 0;
+   overflow: hidden;
+}
+

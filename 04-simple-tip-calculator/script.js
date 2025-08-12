@@ -2,6 +2,9 @@ const amountText = document.getElementById('amount');
 const tipSlider = document.getElementById('tip');
 const tipText = document.getElementById('tip-text');
 const split = document.getElementById('split');
+const splitContainer = document.getElementById('split-container');
+const splitInput = document.getElementById('split-input');
+const splitTotal = document.getElementById('split-total');
 const totalTipText = document.getElementById('total');
 
 // function for converting the tip percentage to its decimal value
@@ -18,10 +21,10 @@ function totalAmountOfTip(bill, tip) {
 };
 
 // function to calculate the split bill
-function splitBill(totalBill, numberOfPeople) {
-   const billSplit = totalBill / numberOfPeople;
+function splitBill(totalBill, splitBill) {
+   const billSplit = totalBill / splitBill;
    return billSplit.toFixed(2);
-}
+};
 
 // Event listeners
 
@@ -40,4 +43,24 @@ tipSlider.addEventListener('input', function() {
 // when amount is inputted
 amountText.addEventListener('input', function() {
    totalTipText.textContent = totalAmountOfTip(amountText.value, tipSlider.value).toFixed(2);
+});
+
+// to show and hide the split bill container
+split.addEventListener('click', function() {
+   if (split.checked === true) {
+      splitContainer.style.height = 'auto';
+      splitContainer.style.overflow = 'auto';
+   } else {
+      splitContainer.style.height = 0;
+      splitInput.textContent = '';
+   }
+});
+
+// calculating the split amount
+splitInput.addEventListener('input', function() {
+   if (splitInput.value === '') {
+      splitTotal.textContent = '';
+   } else {
+      splitTotal.textContent = splitBill(amountText.value, splitInput.value);
+   };
 });
